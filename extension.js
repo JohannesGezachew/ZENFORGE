@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
 
-export function activate(context) {
+export async function activate(context) {
 		// This function is called when your extension is activated
-		const applySettingsCommand = vscode.commands.registerCommand('extension.applyCustomSettings', () => {
+		const applySettingsCommand = vscode.commands.registerCommand('extension.applyCustomSettings', async () => {
 				const config = vscode.workspace.getConfiguration();
 
 				// Define your custom settings here
@@ -1093,6 +1093,15 @@ export function activate(context) {
 				}
 
 				vscode.window.showInformationMessage('Custom settings applied! Please ensure the custom fonts are installed on your system. Check the README for instructions.');
+
+				// Attempt to install required extensions
+				try {
+						await vscode.commands.executeCommand('workbench.extensions.installExtension', 'aura-theme.aura-theme');
+						await vscode.commands.executeCommand('workbench.extensions.installExtension', 'moxer-icons.moxer-icons');
+						vscode.window.showInformationMessage('Custom settings applied and required extensions installed!');
+				} catch {
+						vscode.window.showErrorMessage('Failed to install required extensions. Please install them manually.');
+				}
 		});
 
 		context.subscriptions.push(applySettingsCommand);
