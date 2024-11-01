@@ -62,4 +62,25 @@ You can author your README using Visual Studio Code.  Here are some useful edito
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
+## Installing Custom Fonts
+
+This extension uses custom fonts that need to be installed on your system. Please follow the instructions below:
+
+### macOS/Linux
+
+1. Open a terminal.
+2. Navigate to the extension's `fonts` directory.
+3. Run the following command to install the fonts:
+
+   ```bash
+   ./install-fonts.sh
+   ```
+
+### Windows
+
+1. Open the `fonts` directory in File Explorer.
+2. Double-click `install-fonts.bat` to run the script.
+
+After installing the fonts, restart VS Code to apply the changes.
+
 **Enjoy!**
