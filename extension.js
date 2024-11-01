@@ -1,4 +1,33 @@
 import * as vscode from 'vscode';
+import * as fs from 'fs';
+import * as path from 'path';
+import * as os from 'os';
+
+// Define the installFonts function
+async function installFonts() {
+	try {
+		// Add logic to install fonts here
+		// Example: Copy font files to a specific directory
+		const fontSourcePath = path.join(__dirname, 'fonts'); // Assuming fonts are in a 'fonts' directory
+		const fontDestinationPath = process.platform === 'win32'
+			? path.join(os.homedir(), 'AppData', 'Local', 'Microsoft', 'Windows', 'Fonts') // Example for Windows
+			: path.join(os.homedir(), '.fonts'); // Example for Linux
+
+		if (!fs.existsSync(fontDestinationPath)) {
+			fs.mkdirSync(fontDestinationPath, { recursive: true });
+		}
+
+		fs.readdirSync(fontSourcePath).forEach(file => {
+			const sourceFile = path.join(fontSourcePath, file);
+			const destinationFile = path.join(fontDestinationPath, file);
+			fs.copyFileSync(sourceFile, destinationFile);
+		});
+
+		vscode.window.showInformationMessage('Fonts installed successfully.');
+	} catch (error) {
+		vscode.window.showErrorMessage('Failed to install fonts: ' + error.message);
+	}
+}
 
 export async function activate(context) {
 		// This function is called when your extension is activated
@@ -1105,6 +1134,10 @@ export async function activate(context) {
 		});
 
 		context.subscriptions.push(applySettingsCommand);
+
+		// Register the installFonts command
+		const installFontsCommand = vscode.commands.registerCommand('extension.installFonts', installFonts);
+		context.subscriptions.push(installFontsCommand);
 }
 
 export function deactivate() {}
