@@ -1092,7 +1092,7 @@ export function activate(context) {
 						config.update(key, value, vscode.ConfigurationTarget.Global);
 				}
 
-				vscode.window.showInformationMessage('Custom settings applied!');
+				vscode.window.showInformationMessage('Custom settings applied! Please ensure the custom fonts are installed on your system. Check the README for instructions.');
 		});
 
 		context.subscriptions.push(applySettingsCommand);
