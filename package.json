@@ -1,0 +1,36 @@
+{
+  "name": "zenforge",
+  "displayName": "ZenForge",
+  "description": "ZenForge  – A custom VS Code configuration extension that transforms your editor into a focused, distraction-free coding environment, designed for developers who value both aesthetics and efficiency.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "zenforge.helloWorld",
+      "title": "Hello World"
+    }, {
+      "command": "extension.applyCustomSettings",
+      "title": "Apply Custom Settings"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "eslint": "^9.13.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
