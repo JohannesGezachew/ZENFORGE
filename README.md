@@ -1,70 +1,41 @@
-# zenforge README
+# Zenforge
 
-This is the README for your extension "zenforge". After writing up a brief description, we recommend including the following sections.
+Zenforge is a Visual Studio Code extension designed to enhance your coding experience with custom themes and icons.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- **Aura Theme Integration**: Automatically installs and applies the Aura theme for a visually appealing coding environment.
+- **Moxer Icons**: Includes Moxer Icons for a modern and intuitive file icon set.
+- **Custom Font Support**: Easily install custom fonts to further personalize your editor.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code version 1.60.0 or higher.
+- Internet connection for downloading themes and icons.
+
+## Installation
+
+1. Install the extension from the VS Code Marketplace.
+2. Follow the instructions to install custom fonts (see below).
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- `zenforge.enable`: Enable/disable Zenforge features.
+- `zenforge.theme`: Choose between different themes provided by the extension.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Some users may experience issues with font installation on Windows. Ensure you have administrative privileges.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- Initial release with Aura Theme and Moxer Icons integration.
 
 ## Installing Custom Fonts
-
-This extension uses custom fonts that need to be installed on your system. Please follow the instructions below:
 
 ### macOS/Linux
 
@@ -83,4 +54,8 @@ This extension uses custom fonts that need to be installed on your system. Pleas
 
 After installing the fonts, restart VS Code to apply the changes.
 
-**Enjoy!**
+## Support
+
+For support, please open an issue on our [GitHub repository](https://github.com/your-repo/zenforge).
+
+**Enjoy coding with Zenforge!**
