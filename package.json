@@ -11,11 +11,19 @@
   ],
   "icon": "icon.webp",
   "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:extension.applyCustomSettings",
+    "onCommand:extension.installFonts"
+  ],
   "contributes": {
     "commands": [
       {
         "command": "extension.applyCustomSettings",
         "title": "Apply Custom Settings"
+      },
+      {
+        "command": "extension.installFonts",
+        "title": "Install Fonts"
       }
     ]
   },
@@ -31,5 +39,9 @@
     "eslint": "^9.13.0",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JohannesGezachew/ZENFORGE.git"
   }
 }
