@@ -10,7 +10,9 @@
     "Other"
   ],
   "icon": "icon.webp",
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:extension.applyCustomSettings"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
