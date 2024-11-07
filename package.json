@@ -11,10 +11,7 @@
   ],
   "icon": "icon.webp",
   "main": "./extension.js",
-  "activationEvents": [
-    "onCommand:extension.applyCustomSettings",
-    "onCommand:extension.installFonts"
-  ],
+  "activationEvents": [],
   "contributes": {
     "commands": [
       {
