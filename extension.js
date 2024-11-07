@@ -1136,7 +1136,7 @@ async function applyCustomSettings() {
 		await vscode.commands.executeCommand('workbench.extensions.installExtension', 'aura-theme.aura-theme');
 		await vscode.commands.executeCommand('workbench.extensions.installExtension', 'moxer-icons.moxer-icons');
 		vscode.window.showInformationMessage('Custom settings applied and required extensions installed!');
-	} catch (error) {
+	} catch {
 		vscode.window.showErrorMessage('Failed to install required extensions. Please install them manually.');
 	}
 }
