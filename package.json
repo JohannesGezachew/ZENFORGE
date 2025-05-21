@@ -4,15 +4,25 @@
   "description": "ZenForge  – A custom VS Code configuration extension that transforms your editor into a focused, distraction-free coding environment, designed for developers who value both aesthetics and efficiency.",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.92.0"
+    "vscode": "^1.60.0"
   },
   "categories": [
     "Other"
   ],
   "icon": "icon.webp",
   "main": "./extension.js",
-  "activationEvents": [],
+  "activationEvents": ["onStartupFinished"],
   "contributes": {
+    "configuration": {
+      "title": "ZenForge",
+      "properties": {
+        "zenforge.applyNeovimSettings": {
+          "type": "boolean",
+          "default": false,
+          "description": "Apply Neovim-specific settings when ZenForge settings are applied."
+        }
+      }
+    },
     "commands": [
       {
         "command": "extension.applyCustomSettings",
@@ -21,6 +31,10 @@
       {
         "command": "extension.installFonts",
         "title": "Install Fonts"
+      },
+      {
+        "command": "zenforge.restoreBackedUpSettings",
+        "title": "ZenForge: Restore User Settings"
       }
     ]
   },
